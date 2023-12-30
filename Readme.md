@@ -27,10 +27,16 @@ Estado en desarrollo / comienzo
 ## Instalación
 Para instalarte este proyecto en local sigue los siguientes pasos:
 ```bash
-git clone
-git submodule add  https://github.com/google/docsy.git themes/docsy
-cd "Carpeta donde se haya descargado el proyecto"
-hugo server & (para abrir el proyecto en local)
+# Primero clonamos o hacemosun fork del proyecto
+## si usas ssh
+git cloen git@github.com:MAlejandroR/apuntes-laravel.git
+## si no, por https
+git clone https://github.com/MAlejandroR/apuntes-laravel.git
+## Vamos a la carpeta del proyecto, si no has especificado nada, habrá creado apuntes_laravel
+cd apuntes_laravel
+## Para abrir el proyecto en local ejecutarmos server de hugo
+## La  primera vez tardará un poco más, ya que tiene que clonar el submodulo de docsy (el tema)
+hugo server &
 ```
 ## Uso
 
