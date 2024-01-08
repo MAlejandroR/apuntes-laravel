@@ -57,24 +57,19 @@ title = "Docsy"
 description = "Docsy er operativsystem for skyen"
 languageName = "English"
 contentDir = "content/en"
-time_format_default = "02.01.2006"
-time_format_blog = "02.01.2006"
+
 
 [languages.es]
 title = "Máster en  Web"
 description = "Apuntes sobre web"
 languageName = "Español"
 contentDir = "content/es"
-time_format_default = "02.01.2006"
-time_format_blog = "02.01.2006"
 
 [languages.fr]
 title = "Docsy"
 description = "Docsy er operativsystem for skyen"
 languageName = "Francés"
 contentDir = "content/fr"
-time_format_default = "02.01.2006"
-time_format_blog = "02.01.2006"
 
 [params.ui]
 sidebar_menu_compact = true
@@ -85,6 +80,7 @@ sidebar_menu_foldable = true
 custom_css=['/css/estilo.css']
 copyright = "@MRomero"
 privacy_policy = "https://policies.google.com/privacy"
+icons = {smile = ":smile:", wave = "👋", rocket = "🚀", etc = "..." }
 
 
 

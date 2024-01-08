@@ -4278,13 +4278,13 @@ a.close.disabled {
 .toast-body {
   padding: 0.75rem; }
 
-.modal-open {
+.exampleComponent-open {
   overflow: hidden; }
-  .modal-open .modal {
+  .exampleComponent-open .exampleComponent {
     overflow-x: hidden;
     overflow-y: auto; }
 
-.modal {
+.exampleComponent {
   position: fixed;
   top: 0;
   left: 0;
@@ -4295,53 +4295,53 @@ a.close.disabled {
   overflow: hidden;
   outline: 0; }
 
-.modal-dialog {
+.exampleComponent-dialog {
   position: relative;
   width: auto;
   margin: 0.5rem;
   pointer-events: none; }
-  .modal.fade .modal-dialog {
+  .exampleComponent.fade .exampleComponent-dialog {
     transition: transform 0.3s ease-out;
     transform: translate(0, -50px); }
     @media (prefers-reduced-motion: reduce) {
-      .modal.fade .modal-dialog {
+      .exampleComponent.fade .exampleComponent-dialog {
         transition: none; } }
-  .modal.show .modal-dialog {
+  .exampleComponent.show .exampleComponent-dialog {
     transform: none; }
-  .modal.modal-static .modal-dialog {
+  .exampleComponent.exampleComponent-static .exampleComponent-dialog {
     transform: scale(1.02); }
 
-.modal-dialog-scrollable {
+.exampleComponent-dialog-scrollable {
   display: flex;
   max-height: calc(100% - 1rem); }
-  .modal-dialog-scrollable .modal-content {
+  .exampleComponent-dialog-scrollable .exampleComponent-content {
     max-height: calc(100vh - 1rem);
     overflow: hidden; }
-  .modal-dialog-scrollable .modal-header,
-  .modal-dialog-scrollable .modal-footer {
+  .exampleComponent-dialog-scrollable .exampleComponent-header,
+  .exampleComponent-dialog-scrollable .exampleComponent-footer {
     flex-shrink: 0; }
-  .modal-dialog-scrollable .modal-body {
+  .exampleComponent-dialog-scrollable .exampleComponent-body {
     overflow-y: auto; }
 
-.modal-dialog-centered {
+.exampleComponent-dialog-centered {
   display: flex;
   align-items: center;
   min-height: calc(100% - 1rem); }
-  .modal-dialog-centered::before {
+  .exampleComponent-dialog-centered::before {
     display: block;
     height: calc(100vh - 1rem);
     height: min-content;
     content: ""; }
-  .modal-dialog-centered.modal-dialog-scrollable {
+  .exampleComponent-dialog-centered.exampleComponent-dialog-scrollable {
     flex-direction: column;
     justify-content: center;
     height: 100%; }
-    .modal-dialog-centered.modal-dialog-scrollable .modal-content {
+    .exampleComponent-dialog-centered.exampleComponent-dialog-scrollable .exampleComponent-content {
       max-height: none; }
-    .modal-dialog-centered.modal-dialog-scrollable::before {
+    .exampleComponent-dialog-centered.exampleComponent-dialog-scrollable::before {
       content: none; }
 
-.modal-content {
+.exampleComponent-content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -4354,7 +4354,7 @@ a.close.disabled {
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
   outline: 0; }
 
-.modal-backdrop {
+.exampleComponent-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -4362,12 +4362,12 @@ a.close.disabled {
   width: 100vw;
   height: 100vh;
   background-color: #000; }
-  .modal-backdrop.fade {
+  .exampleComponent-backdrop.fade {
     opacity: 0; }
-  .modal-backdrop.show {
+  .exampleComponent-backdrop.show {
     opacity: 0.5; }
 
-.modal-header {
+.exampleComponent-header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -4375,20 +4375,20 @@ a.close.disabled {
   border-bottom: 1px solid #dee2e6;
   border-top-left-radius: calc(0.3rem - 1px);
   border-top-right-radius: calc(0.3rem - 1px); }
-  .modal-header .close {
+  .exampleComponent-header .close {
     padding: 1rem 1rem;
     margin: -1rem -1rem -1rem auto; }
 
-.modal-title {
+.exampleComponent-title {
   margin-bottom: 0;
   line-height: 1.5; }
 
-.modal-body {
+.exampleComponent-body {
   position: relative;
   flex: 1 1 auto;
   padding: 1rem; }
 
-.modal-footer {
+.exampleComponent-footer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -4397,10 +4397,10 @@ a.close.disabled {
   border-top: 1px solid #dee2e6;
   border-bottom-right-radius: calc(0.3rem - 1px);
   border-bottom-left-radius: calc(0.3rem - 1px); }
-  .modal-footer > * {
+  .exampleComponent-footer > * {
     margin: 0.25rem; }
 
-.modal-scrollbar-measure {
+.exampleComponent-scrollbar-measure {
   position: absolute;
   top: -9999px;
   width: 50px;
@@ -4408,30 +4408,30 @@ a.close.disabled {
   overflow: scroll; }
 
 @media (min-width: 576px) {
-  .modal-dialog {
+  .exampleComponent-dialog {
     max-width: 500px;
     margin: 1.75rem auto; }
-  .modal-dialog-scrollable {
+  .exampleComponent-dialog-scrollable {
     max-height: calc(100% - 3.5rem); }
-    .modal-dialog-scrollable .modal-content {
+    .exampleComponent-dialog-scrollable .exampleComponent-content {
       max-height: calc(100vh - 3.5rem); }
-  .modal-dialog-centered {
+  .exampleComponent-dialog-centered {
     min-height: calc(100% - 3.5rem); }
-    .modal-dialog-centered::before {
+    .exampleComponent-dialog-centered::before {
       height: calc(100vh - 3.5rem);
       height: min-content; }
-  .modal-content {
+  .exampleComponent-content {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); }
-  .modal-sm {
+  .exampleComponent-sm {
     max-width: 300px; } }
 
 @media (min-width: 992px) {
-  .modal-lg,
-  .modal-xl {
+  .exampleComponent-lg,
+  .exampleComponent-xl {
     max-width: 800px; } }
 
 @media (min-width: 1200px) {
-  .modal-xl {
+  .exampleComponent-xl {
     max-width: 1140px; } }
 
 .tooltip {
