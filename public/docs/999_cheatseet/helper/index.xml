@@ -1,0 +1,143 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Máster en  Web – Helper en Laravel</title>
+    <link>http://proyectosdwa.es/laravel/docs/999_cheatseet/helper/</link>
+    <description>Recent content in Helper en Laravel on Máster en  Web</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Sat, 08 Apr 2023 18:21:47 +0200</lastBuildDate>
+    
+	  <atom:link href="http://proyectosdwa.es/laravel/docs/999_cheatseet/helper/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Rutas</title>
+      <link>http://proyectosdwa.es/laravel/docs/999_cheatseet/helper/rutas/</link>
+      <pubDate>Sat, 08 Apr 2023 18:21:47 +0200</pubDate>
+      
+      <guid>http://proyectosdwa.es/laravel/docs/999_cheatseet/helper/rutas/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;helpers-de-laravel-para-rutas&#34;&gt;Helpers de Laravel para Rutas&lt;/h1&gt;
+&lt;p&gt;Laravel proporciona varios helpers útiles para trabajar con rutas. &lt;br&gt;
+Estos son algunos de los más importantes:&lt;/p&gt;
+&lt;h2 id=&#34;routenombre_ruta&#34;&gt;&lt;code&gt;route(&#39;nombre_ruta&#39;)&lt;/code&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Genera una URL para una ruta nombrada.&lt;/li&gt;
+&lt;li&gt;Podemos pasar parámetros a la ruta como un array asociativo &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      [‘variable’=&gt;valor]
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;route(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;user.profile&amp;#39;&lt;/span&gt;, [&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt; =&amp;gt; &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;]);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;urlpath&#34;&gt;&lt;code&gt;url(&#39;path&#39;)&lt;/code&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Genera una URL absoluta para el path dado.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;url(&#39;/user&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;redirect-routenombre_ruta&#34;&gt;&lt;code&gt;redirect()-&amp;gt;route(&#39;nombre_ruta&#39;)&lt;/code&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Redirige a una ruta nombrada.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;redirect()-&amp;gt;route(&#39;home&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;actionnombrecontroladormetodo&#34;&gt;&lt;code&gt;action(&#39;NombreControlador@metodo&#39;)&lt;/code&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Genera una URL para el controlador y método especificados.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;action(&#39;UserController@show&#39;, [&#39;id&#39; =&amp;gt; 1])&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;back&#34;&gt;&lt;code&gt;back()&lt;/code&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Redirige al usuario a la ubicación anterior.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;return back()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;current&#34;&gt;&lt;code&gt;current()&lt;/code&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Obtiene la URL actual.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;url()-&amp;gt;current()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;previous&#34;&gt;&lt;code&gt;previous()&lt;/code&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Obtiene la URL previa a la actual.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;url()-&amp;gt;previous()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Vistas</title>
+      <link>http://proyectosdwa.es/laravel/docs/999_cheatseet/helper/vistas/</link>
+      <pubDate>Sat, 08 Apr 2023 18:21:47 +0200</pubDate>
+      
+      <guid>http://proyectosdwa.es/laravel/docs/999_cheatseet/helper/vistas/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;helpers-de-vistas-en-laravel&#34;&gt;Helpers de Vistas en Laravel&lt;/h1&gt;
+&lt;h2 id=&#34;qué-son-los-helpers-de-vistas&#34;&gt;¿Qué son los Helpers de Vistas?&lt;/h2&gt;
+&lt;p&gt;Los helpers de vistas en Laravel son funciones que facilitan el manejo y la renderización de las vistas. Estos helpers permiten una interacción más simple y eficiente con las plantillas Blade del framework.&lt;/p&gt;
+&lt;p&gt;Cómo helper de vistas, tenemos  la función &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      view()
+&lt;/span&gt;
+ de Laravel.&lt;/p&gt;
+&lt;p&gt;Este helper &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      retorna una instancia de una vista
+&lt;/span&gt;
+.&lt;/p&gt;
+&lt;p&gt;Esta función no solo carga y retorna la vista especificada, sino que también permite &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      el encadenamiento de métodos adicionales disponibles en la instancia del objeto de la vista
+&lt;/span&gt;
+.&lt;/p&gt;
+&lt;p&gt;Esto facilita &lt;strong&gt;la manipulación y personalización de la vista&lt;/strong&gt; antes de que se envíe al navegador.&lt;/p&gt;
+&lt;h2 id=&#34;principales-helpers-de-vistas&#34;&gt;Principales Helpers de Vistas&lt;/h2&gt;
+&lt;h3 id=&#34;view&#34;&gt;&lt;strong&gt;&lt;code&gt;view()&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Genera una nueva vista.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;view(&#39;welcome&#39;, [&#39;data&#39; =&amp;gt; $data])&lt;/code&gt; carga la vista &lt;code&gt;welcome&lt;/code&gt; con datos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;view-make&#34;&gt;&lt;strong&gt;&lt;code&gt;view()-&amp;gt;make()&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Similar a &lt;code&gt;view()&lt;/code&gt;, pero con una sintaxis alternativa.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;view()-&amp;gt;make(&#39;welcome&#39;, [&#39;data&#39; =&amp;gt; $data])&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;view-exists&#34;&gt;&lt;strong&gt;&lt;code&gt;view()-&amp;gt;exists()&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Comprueba si una vista existe.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;view()-&amp;gt;exists(&#39;welcome&#39;)&lt;/code&gt; devuelve &lt;code&gt;true&lt;/code&gt; si la vista &lt;code&gt;welcome&lt;/code&gt; existe.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;view-first&#34;&gt;&lt;strong&gt;&lt;code&gt;view()-&amp;gt;first()&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Intenta renderizar la primera vista existente de una lista.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;view()-&amp;gt;first([&#39;custom&#39;, &#39;default&#39;])&lt;/code&gt; carga la primera vista que exista entre &lt;code&gt;custom&lt;/code&gt; y &lt;code&gt;default&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;view-share&#34;&gt;&lt;strong&gt;&lt;code&gt;view()-&amp;gt;share()&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Comparte una variable en todas las vistas.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;view()-&amp;gt;share(&#39;key&#39;, &#39;value&#39;)&lt;/code&gt; hace que &lt;code&gt;key&lt;/code&gt; esté disponible globalmente en todas las vistas.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;view-composer&#34;&gt;&lt;strong&gt;&lt;code&gt;view()-&amp;gt;composer()&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Asigna datos a una vista cada vez que se carga.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;view()-&amp;gt;composer(&#39;welcome&#39;, function ($view) { ... })&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;view-creator&#34;&gt;&lt;strong&gt;&lt;code&gt;view()-&amp;gt;creator()&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Similar a &lt;code&gt;view()-&amp;gt;composer()&lt;/code&gt;, pero se ejecuta cuando la vista se crea.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;view()-&amp;gt;creator(&#39;welcome&#39;, function ($view) { ... })&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Estos helpers son fundamentales para la gestión de vistas en Laravel, permitiendo un flujo de trabajo más ágil y una mayor flexibilidad en la renderización y el manejo de datos en las vistas.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;url()-&amp;gt;previous()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

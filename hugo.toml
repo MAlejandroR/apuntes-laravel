@@ -1,4 +1,4 @@
-baseURL = 'http://proyectosdwa.es/manuel/v2'
+baseURL = 'http://proyectosdwa.es/laravel'
 #baseURL = 'http://localhost'
 languageCode = 'es-es'
 title = 'Recursos de apoyo al aprendizaje'
