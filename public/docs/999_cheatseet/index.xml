@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Máster en  Web – Cheat Sheet</title>
-    <link>http://proyectosdwa.es/laravel/docs/999_cheatseet/</link>
+    <link>http://manuel.infenlaces.com/contenido/laravel/docs/999_cheatseet/</link>
     <description>Recent content in Cheat Sheet on Máster en  Web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <lastBuildDate>Sat, 08 Apr 2023 18:21:47 +0200</lastBuildDate>
     
-	  <atom:link href="http://proyectosdwa.es/laravel/docs/999_cheatseet/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://manuel.infenlaces.com/contenido/laravel/docs/999_cheatseet/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>Docs: Helper en Laravel</title>
-      <link>http://proyectosdwa.es/laravel/docs/999_cheatseet/helper/</link>
+      <link>http://manuel.infenlaces.com/contenido/laravel/docs/999_cheatseet/helper/</link>
       <pubDate>Sat, 08 Apr 2023 18:21:47 +0200</pubDate>
       
-      <guid>http://proyectosdwa.es/laravel/docs/999_cheatseet/helper/</guid>
+      <guid>http://manuel.infenlaces.com/contenido/laravel/docs/999_cheatseet/helper/</guid>
       <description>
         
         
@@ -66,10 +66,10 @@
     
     <item>
       <title>Docs: Artisan (CLI)</title>
-      <link>http://proyectosdwa.es/laravel/docs/999_cheatseet/artisan/</link>
+      <link>http://manuel.infenlaces.com/contenido/laravel/docs/999_cheatseet/artisan/</link>
       <pubDate>Sat, 08 Apr 2023 18:21:47 +0200</pubDate>
       
-      <guid>http://proyectosdwa.es/laravel/docs/999_cheatseet/artisan/</guid>
+      <guid>http://manuel.infenlaces.com/contenido/laravel/docs/999_cheatseet/artisan/</guid>
       <description>
         
         
@@ -155,10 +155,10 @@ La palabra artisan viene de artesano intentando reflejar la sencillez y eficienc
     
     <item>
       <title>Docs: Directivas Blade</title>
-      <link>http://proyectosdwa.es/laravel/docs/999_cheatseet/blade/</link>
+      <link>http://manuel.infenlaces.com/contenido/laravel/docs/999_cheatseet/blade/</link>
       <pubDate>Sat, 08 Apr 2023 18:21:47 +0200</pubDate>
       
-      <guid>http://proyectosdwa.es/laravel/docs/999_cheatseet/blade/</guid>
+      <guid>http://manuel.infenlaces.com/contenido/laravel/docs/999_cheatseet/blade/</guid>
       <description>
         
         

@@ -1,4 +1,5 @@
-baseURL = 'http://proyectosdwa.es/laravel'
+#baseURL = 'http://proyectosdwa.es/laravel'
+baseURL = 'http://manuel.infenlaces.com/contenido/laravel'
 #baseURL = 'http://localhost'
 languageCode = 'es-es'
 title = 'Recursos de apoyo al aprendizaje'

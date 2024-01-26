@@ -2,55 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://proyectosdwa.es/laravel/fr/categories/</loc>
+    <loc>http://manuel.infenlaces.com/contenido/laravel/fr/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://proyectosdwa.es/laravel/en/categories/"
+                href="http://manuel.infenlaces.com/contenido/laravel/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://proyectosdwa.es/laravel/categories/"
+                href="http://manuel.infenlaces.com/contenido/laravel/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://proyectosdwa.es/laravel/fr/categories/"
+                href="http://manuel.infenlaces.com/contenido/laravel/fr/categories/"
                 />
   </url><url>
-    <loc>http://proyectosdwa.es/laravel/fr/</loc>
+    <loc>http://manuel.infenlaces.com/contenido/laravel/fr/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://proyectosdwa.es/laravel/"
+                href="http://manuel.infenlaces.com/contenido/laravel/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://proyectosdwa.es/laravel/en/"
+                href="http://manuel.infenlaces.com/contenido/laravel/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://proyectosdwa.es/laravel/fr/"
+                href="http://manuel.infenlaces.com/contenido/laravel/fr/"
                 />
   </url><url>
-    <loc>http://proyectosdwa.es/laravel/fr/tags/</loc>
+    <loc>http://manuel.infenlaces.com/contenido/laravel/fr/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://proyectosdwa.es/laravel/en/tags/"
+                href="http://manuel.infenlaces.com/contenido/laravel/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://proyectosdwa.es/laravel/tags/"
+                href="http://manuel.infenlaces.com/contenido/laravel/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://proyectosdwa.es/laravel/fr/tags/"
+                href="http://manuel.infenlaces.com/contenido/laravel/fr/tags/"
                 />
   </url>
 </urlset>

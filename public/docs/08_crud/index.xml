@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Máster en  Web – Creando un CRUD</title>
-    <link>http://proyectosdwa.es/laravel/docs/08_crud/</link>
+    <link>http://manuel.infenlaces.com/contenido/laravel/docs/08_crud/</link>
     <description>Recent content in Creando un CRUD on Máster en  Web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <lastBuildDate>Sat, 08 Apr 2023 18:21:47 +0200</lastBuildDate>
     
-	  <atom:link href="http://proyectosdwa.es/laravel/docs/08_crud/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://manuel.infenlaces.com/contenido/laravel/docs/08_crud/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>Docs: Creando la tabla</title>
-      <link>http://proyectosdwa.es/laravel/docs/08_crud/01_la-tabla/</link>
+      <link>http://manuel.infenlaces.com/contenido/laravel/docs/08_crud/01_la-tabla/</link>
       <pubDate>Sat, 08 Apr 2023 18:21:47 +0200</pubDate>
       
-      <guid>http://proyectosdwa.es/laravel/docs/08_crud/01_la-tabla/</guid>
+      <guid>http://manuel.infenlaces.com/contenido/laravel/docs/08_crud/01_la-tabla/</guid>
       <description>
         
         
@@ -32,7 +32,7 @@
 &lt;hr&gt;
 &lt;p&gt;Vamos a la migracion que hemos creado y añadimos los campos que consideremos&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 210px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;http://proyectosdwa.es/laravel/laravel/docs/08_crud/01_la-tabla/tabla_alumnos_hu9e32944f2c97c4ccc1acfd057f367fb5_16335_200x100_fill_box_smart1_3.png&#34; width=&#34;200&#34; height=&#34;100&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://manuel.infenlaces.com/contenido/laravel/contenido/laravel/docs/08_crud/01_la-tabla/tabla_alumnos_hu9e32944f2c97c4ccc1acfd057f367fb5_16335_200x100_fill_box_smart1_3.png&#34; width=&#34;200&#34; height=&#34;100&#34;&gt;
 &lt;/figure&gt;
 &lt;p&gt;Lo establecemos en el método &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
 Up(…)
@@ -148,7 +148,7 @@ aquí &lt;a href=&#34;https://www.interior.gob.es/opencms/ca/servicios-al-ciudad
 &lt;h3 id=&#34;creamos-la-llamada-a-las-factorías-desde-el-seeder&#34;&gt;Creamos la llamada a las factorías desde el seeder&lt;/h3&gt;
 &lt;p&gt;Para ello vamos al seeder AlumnoSeeder&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 210px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;http://proyectosdwa.es/laravel/laravel/docs/08_crud/01_la-tabla/databaseseeder_hub087265f883766db3e7022dc8a956422_8663_200x100_fill_box_smart1_3.png&#34; width=&#34;200&#34; height=&#34;100&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://manuel.infenlaces.com/contenido/laravel/contenido/laravel/docs/08_crud/01_la-tabla/databaseseeder_hub087265f883766db3e7022dc8a956422_8663_200x100_fill_box_smart1_3.png&#34; width=&#34;200&#34; height=&#34;100&#34;&gt;
 &lt;/figure&gt;
 &lt;p&gt;E invocamos a la factoria&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;
@@ -189,7 +189,7 @@ use App\Models\Alumno
 &lt;/div&gt;
 &lt;p&gt;Ahora queda llamar al seeder a partir de la clase DatabaseSeeder&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 310px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;http://proyectosdwa.es/laravel/laravel/docs/08_crud/01_la-tabla/databaseseeder_hub087265f883766db3e7022dc8a956422_8663_300x150_fill_box_smart1_3.png&#34; width=&#34;300&#34; height=&#34;150&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://manuel.infenlaces.com/contenido/laravel/contenido/laravel/docs/08_crud/01_la-tabla/databaseseeder_hub087265f883766db3e7022dc8a956422_8663_300x150_fill_box_smart1_3.png&#34; width=&#34;300&#34; height=&#34;150&#34;&gt;
 &lt;/figure&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;
 &lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
@@ -311,10 +311,10 @@ Lo podemos hacer con un único comando&lt;/p&gt;
     
     <item>
       <title>Docs: El controlador y las vistas</title>
-      <link>http://proyectosdwa.es/laravel/docs/08_crud/03_el-controlador/</link>
+      <link>http://manuel.infenlaces.com/contenido/laravel/docs/08_crud/03_el-controlador/</link>
       <pubDate>Sat, 08 Apr 2023 18:21:47 +0200</pubDate>
       
-      <guid>http://proyectosdwa.es/laravel/docs/08_crud/03_el-controlador/</guid>
+      <guid>http://manuel.infenlaces.com/contenido/laravel/docs/08_crud/03_el-controlador/</guid>
       <description>
         
         
@@ -372,7 +372,7 @@ en fichero de rutas &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:d
 web.php
 &lt;/span&gt;&lt;/p&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 210px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;http://proyectosdwa.es/laravel/laravel/docs/08_crud/03_el-controlador/web_hue43dde1c021b61ae77e3e44799bc1f09_5794_200x150_fill_box_smart1_3.png&#34; width=&#34;200&#34; height=&#34;150&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://manuel.infenlaces.com/contenido/laravel/contenido/laravel/docs/08_crud/03_el-controlador/web_hue43dde1c021b61ae77e3e44799bc1f09_5794_200x150_fill_box_smart1_3.png&#34; width=&#34;200&#34; height=&#34;150&#34;&gt;
 &lt;/figure&gt;
 &lt;p&gt;En él incluímos la sigueinte línea&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;
@@ -406,7 +406,7 @@ Alternativamente puedes establecer con &lt;span class=&#34;font-weight-bold&#34;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 1510px&#34;&gt;
-	&lt;img class=&#34;card-img-top&#34; src=&#34;http://proyectosdwa.es/laravel/laravel/docs/08_crud/03_el-controlador/routelist_hub8f9acbbbda8f31eae88b043f050f301_81006_1500x200_fill_box_smart1_3.png&#34; width=&#34;1500&#34; height=&#34;200&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://manuel.infenlaces.com/contenido/laravel/contenido/laravel/docs/08_crud/03_el-controlador/routelist_hub8f9acbbbda8f31eae88b043f050f301_81006_1500x200_fill_box_smart1_3.png&#34; width=&#34;1500&#34; height=&#34;200&#34;&gt;
 &lt;/figure&gt;
 
 &lt;/div&gt;
