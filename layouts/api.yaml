@@ -1,0 +1,48 @@
+openapi: 3.0.0
+info:
+  title: Ejemplo de API
+  version: 1.0.0
+paths:
+  /alumnos:
+    get:
+      summary: Obtener lista de alumnos
+      responses:
+        '200':
+          description: Éxito
+  /alumnos/{id}:
+    get:
+      summary: Obtener detalles de un alumno
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: ID del usuario
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Éxito
+    put:
+      summary: Actualizar un usuario
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: ID del usuario
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Éxito
+    delete:
+      summary: Eliminar un alumno
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: ID del usuario
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: No Content
