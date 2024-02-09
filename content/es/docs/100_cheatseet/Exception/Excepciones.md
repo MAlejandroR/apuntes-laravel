@@ -1,6 +1,6 @@
 ---
 title: "Excepciones"
-linkTitle: "Laravel"
+linkTitle: "Exception"
 weight: 100
 icon: fa-brands fa-laravel
 draft: false

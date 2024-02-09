@@ -1,6 +1,6 @@
 ---
 title: "Cheet Sheet"
-linkTitle: "Laravel"
+linkTitle: "Validación (Request)"
 weight: 100
 menu:
 main:

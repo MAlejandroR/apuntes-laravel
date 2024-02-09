@@ -1,7 +1,7 @@
 ---
 title: "Cheet Sheet"
 linkTitle: "Cheet Sheet"
-weight: 100
+weight: 1000
 menu:
   main:
     weight: 100
