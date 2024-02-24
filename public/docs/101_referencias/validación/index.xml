@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Máster en  Web – Cheet Sheet</title>
+    <link>http://localhost:43029/contenido/laravel/docs/101_referencias/validaci%C3%B3n/</link>
+    <description>Recent content in Cheet Sheet on Máster en  Web</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    
+	  <atom:link href="http://localhost:43029/contenido/laravel/docs/101_referencias/validaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

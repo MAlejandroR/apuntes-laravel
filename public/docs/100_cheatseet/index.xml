@@ -1,0 +1,596 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Máster en  Web – Cheet Sheet</title>
+    <link>http://localhost:43029/contenido/laravel/docs/100_cheatseet/</link>
+    <description>Recent content in Cheet Sheet on Máster en  Web</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Sat, 08 Apr 2023 18:21:47 +0200</lastBuildDate>
+    
+	  <atom:link href="http://localhost:43029/contenido/laravel/docs/100_cheatseet/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Helper en Laravel</title>
+      <link>http://localhost:43029/contenido/laravel/docs/100_cheatseet/helper/</link>
+      <pubDate>Sat, 08 Apr 2023 18:21:47 +0200</pubDate>
+      
+      <guid>http://localhost:43029/contenido/laravel/docs/100_cheatseet/helper/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;helpers-en-laravel&#34;&gt;Helpers en Laravel&lt;/h1&gt;
+&lt;h2 id=&#34;qué-son-los-helpers&#34;&gt;¿Qué son los Helpers?&lt;/h2&gt;
+&lt;p&gt;Helpers en Laravel son funciones globales que proporcionan una manera conveniente y eficiente para realizar tareas comunes en la programación con Laravel. Estas funciones están disponibles globalmente en cualquier parte de tu aplicación.&lt;/p&gt;
+&lt;h2 id=&#34;grupos-principales-de-helpers&#34;&gt;Grupos Principales de Helpers&lt;/h2&gt;
+&lt;h3 id=&#34;helpers-de-rutas&#34;&gt;Helpers de Rutas&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;route()&lt;/code&gt;: Genera una URL para una ruta nombrada.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;url()&lt;/code&gt;: Genera una URL absoluta.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;action()&lt;/code&gt;: Genera una URL para un controlador y método específicos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;helpers-de-strings&#34;&gt;Helpers de Strings&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;str_*&lt;/code&gt;: Varias funciones para manipular strings.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;__()&lt;/code&gt;: Traduce el texto dado según tu localización.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;helpers-de-arrays&#34;&gt;Helpers de Arrays&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;array_*&lt;/code&gt;: Funciones para manipular arrays.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;head()&lt;/code&gt;: Devuelve el primer elemento de un array.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;last()&lt;/code&gt;: Devuelve el último elemento de un array.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;helpers-de-vistas&#34;&gt;Helpers de Vistas&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;view()&lt;/code&gt;: Genera una nueva vista.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;response()&lt;/code&gt;: Crea una instancia de respuesta.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;helpers-de-url&#34;&gt;Helpers de URL&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;asset()&lt;/code&gt;: Genera una URL para un asset usando el esquema de URL actual.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;secure_asset()&lt;/code&gt;: Genera una URL segura para un asset.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;helpers-generales&#34;&gt;Helpers Generales&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;app()&lt;/code&gt;: Accede a la instancia del contenedor de servicios.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;config()&lt;/code&gt;: Obtiene o establece valores de configuración.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Rutas</title>
+      <link>http://localhost:43029/contenido/laravel/docs/100_cheatseet/rutas/</link>
+      <pubDate>Sat, 08 Apr 2023 18:21:47 +0200</pubDate>
+      
+      <guid>http://localhost:43029/contenido/laravel/docs/100_cheatseet/rutas/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;helpers-de-laravel-para-rutas&#34;&gt;Helpers de Laravel para Rutas&lt;/h1&gt;
+&lt;p&gt;Laravel proporciona varios helpers útiles para trabajar con rutas. &lt;br&gt;
+Estos son algunos de los más importantes:&lt;/p&gt;
+&lt;h2 id=&#34;routenombre_ruta&#34;&gt;&lt;code&gt;route(&#39;nombre_ruta&#39;)&lt;/code&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Genera una URL para una ruta nombrada.&lt;/li&gt;
+&lt;li&gt;Podemos pasar parámetros a la ruta como un array asociativo &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      [‘variable’=&gt;valor]
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;route(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;user.profile&amp;#39;&lt;/span&gt;, [&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt; =&amp;gt; &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;]);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;urlpath&#34;&gt;&lt;code&gt;url(&#39;path&#39;)&lt;/code&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Genera una URL absoluta para el path dado.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;url(&#39;/user&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;redirect-routenombre_ruta&#34;&gt;&lt;code&gt;redirect()-&amp;gt;route(&#39;nombre_ruta&#39;)&lt;/code&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Redirige a una ruta nombrada.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;redirect()-&amp;gt;route(&#39;home&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;actionnombrecontroladormetodo&#34;&gt;&lt;code&gt;action(&#39;NombreControlador@metodo&#39;)&lt;/code&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Genera una URL para el controlador y método especificados.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;action(&#39;UserController@show&#39;, [&#39;id&#39; =&amp;gt; 1])&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;back&#34;&gt;&lt;code&gt;back()&lt;/code&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Redirige al usuario a la ubicación anterior.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;return back()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;current&#34;&gt;&lt;code&gt;current()&lt;/code&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Obtiene la URL actual.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;url()-&amp;gt;current()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;previous&#34;&gt;&lt;code&gt;previous()&lt;/code&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Obtiene la URL previa a la actual.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;url()-&amp;gt;previous()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Vistas</title>
+      <link>http://localhost:43029/contenido/laravel/docs/100_cheatseet/vistas/</link>
+      <pubDate>Sat, 08 Apr 2023 18:21:47 +0200</pubDate>
+      
+      <guid>http://localhost:43029/contenido/laravel/docs/100_cheatseet/vistas/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;helpers-de-vistas-en-laravel&#34;&gt;Helpers de Vistas en Laravel&lt;/h1&gt;
+&lt;h2 id=&#34;qué-son-los-helpers-de-vistas&#34;&gt;¿Qué son los Helpers de Vistas?&lt;/h2&gt;
+&lt;p&gt;Los helpers de vistas en Laravel son funciones que facilitan el manejo y la renderización de las vistas. Estos helpers permiten una interacción más simple y eficiente con las plantillas Blade del framework.&lt;/p&gt;
+&lt;p&gt;Cómo helper de vistas, tenemos  la función &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      view()
+&lt;/span&gt;
+ de Laravel.&lt;/p&gt;
+&lt;p&gt;Este helper &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      retorna una instancia de una vista
+&lt;/span&gt;
+.&lt;/p&gt;
+&lt;p&gt;Esta función no solo carga y retorna la vista especificada, sino que también permite &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      el encadenamiento de métodos adicionales disponibles en la instancia del objeto de la vista
+&lt;/span&gt;
+.&lt;/p&gt;
+&lt;p&gt;Esto facilita &lt;strong&gt;la manipulación y personalización de la vista&lt;/strong&gt; antes de que se envíe al navegador.&lt;/p&gt;
+&lt;h2 id=&#34;principales-helpers-de-vistas&#34;&gt;Principales Helpers de Vistas&lt;/h2&gt;
+&lt;h3 id=&#34;view&#34;&gt;&lt;strong&gt;&lt;code&gt;view()&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Genera una nueva vista.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;view(&#39;welcome&#39;, [&#39;data&#39; =&amp;gt; $data])&lt;/code&gt; carga la vista &lt;code&gt;welcome&lt;/code&gt; con datos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;view-make&#34;&gt;&lt;strong&gt;&lt;code&gt;view()-&amp;gt;make()&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Similar a &lt;code&gt;view()&lt;/code&gt;, pero con una sintaxis alternativa.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;view()-&amp;gt;make(&#39;welcome&#39;, [&#39;data&#39; =&amp;gt; $data])&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;view-exists&#34;&gt;&lt;strong&gt;&lt;code&gt;view()-&amp;gt;exists()&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Comprueba si una vista existe.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;view()-&amp;gt;exists(&#39;welcome&#39;)&lt;/code&gt; devuelve &lt;code&gt;true&lt;/code&gt; si la vista &lt;code&gt;welcome&lt;/code&gt; existe.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;view-first&#34;&gt;&lt;strong&gt;&lt;code&gt;view()-&amp;gt;first()&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Intenta renderizar la primera vista existente de una lista.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;view()-&amp;gt;first([&#39;custom&#39;, &#39;default&#39;])&lt;/code&gt; carga la primera vista que exista entre &lt;code&gt;custom&lt;/code&gt; y &lt;code&gt;default&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;view-share&#34;&gt;&lt;strong&gt;&lt;code&gt;view()-&amp;gt;share()&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Comparte una variable en todas las vistas.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;view()-&amp;gt;share(&#39;key&#39;, &#39;value&#39;)&lt;/code&gt; hace que &lt;code&gt;key&lt;/code&gt; esté disponible globalmente en todas las vistas.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;view-composer&#34;&gt;&lt;strong&gt;&lt;code&gt;view()-&amp;gt;composer()&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Asigna datos a una vista cada vez que se carga.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;view()-&amp;gt;composer(&#39;welcome&#39;, function ($view) { ... })&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;view-creator&#34;&gt;&lt;strong&gt;&lt;code&gt;view()-&amp;gt;creator()&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Similar a &lt;code&gt;view()-&amp;gt;composer()&lt;/code&gt;, pero se ejecuta cuando la vista se crea.&lt;/li&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;view()-&amp;gt;creator(&#39;welcome&#39;, function ($view) { ... })&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Estos helpers son fundamentales para la gestión de vistas en Laravel, permitiendo un flujo de trabajo más ágil y una mayor flexibilidad en la renderización y el manejo de datos en las vistas.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ejemplo: &lt;code&gt;url()-&amp;gt;previous()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Artisan (CLI)</title>
+      <link>http://localhost:43029/contenido/laravel/docs/100_cheatseet/artisan/</link>
+      <pubDate>Sat, 08 Apr 2023 18:21:47 +0200</pubDate>
+      
+      <guid>http://localhost:43029/contenido/laravel/docs/100_cheatseet/artisan/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;introducción-a-artisan-en-laravel&#34;&gt;Introducción a Artisan en Laravel&lt;/h1&gt;
+&lt;p&gt;Artisan es la interfaz de línea de comandos (CLI) incluida con Laravel. &lt;br&gt;
+Ofrece una variedad de comandos útiles para realizar tareas comunes de desarrollo y mantenimiento de aplicaciones.
+La palabra artisan viene de artesano intentando reflejar la sencillez y eficiencia de su utilización&lt;/p&gt;
+&lt;h1 id=&#34;características-clave&#34;&gt;Características Clave&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Generación de Código&lt;/strong&gt;: Artisan facilita la creación de modelos, controladores, y otras clases necesarias en aplicaciones Laravel.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Migraciones de Bases de Datos&lt;/strong&gt;: Permite manejar fácilmente las migraciones de bases de datos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tareas Programadas&lt;/strong&gt;: Proporciona una forma sencilla de programar tareas que deben ejecutarse periódicamente.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Entorno de Pruebas&lt;/strong&gt;: Ofrece comandos para ejecutar pruebas y otros chequeos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      Artisan es una herramienta esencial en el desarrollo de Laravel
+&lt;/span&gt;
+, que aumenta la eficiencia y simplifica muchas tareas de programación.&lt;/p&gt;
+&lt;h1 id=&#34;ejemplo-de-uso&#34;&gt;Ejemplo de Uso&lt;/h1&gt;
+&lt;p&gt;Para ver una lista de todos los comandos disponibles, puedes ejecutar:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;php artisan list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;clasificación-de-los-principales-comandos-de-artisan-en-laravel&#34;&gt;Clasificación de los Principales Comandos de Artisan en Laravel&lt;/h1&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;h2 id=&#34;clasificación-de-los-principales-comandos-de-artisan-en-laravel&#34;&gt;Clasificación de los Principales Comandos de Artisan en Laravel&lt;/h2&gt;
+&lt;hr&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Artisan, el CLI de Laravel, ofrece una amplia gama de comandos útiles. A continuación se presentan algunos de los comandos más importantes agrupados por su funcionalidad.&lt;/p&gt;
+&lt;h2 id=&#34;comandos-de-generación-de-código&#34;&gt;Comandos de Generación de Código&lt;/h2&gt;
+&lt;p&gt;Estos comandos ayudan en la creación rápida de clases comúnmente usadas.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Controladores&lt;/strong&gt;: &lt;code&gt;php artisan make:controller&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Modelos&lt;/strong&gt;: &lt;code&gt;php artisan make:model&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Migraciones&lt;/strong&gt;: &lt;code&gt;php artisan make:migration&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Seeders&lt;/strong&gt;: &lt;code&gt;php artisan make:seeder&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Factories&lt;/strong&gt;: &lt;code&gt;php artisan make:factory&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Eventos&lt;/strong&gt;: &lt;code&gt;php artisan make:event&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Listeners&lt;/strong&gt;: &lt;code&gt;php artisan make:listener&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Middlewares&lt;/strong&gt;: &lt;code&gt;php artisan make:middleware&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;comandos-de-base-de-datos-y-migraciones&#34;&gt;Comandos de Base de Datos y Migraciones&lt;/h2&gt;
+&lt;p&gt;Utilizados para gestionar bases de datos y ejecutar migraciones.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ejecutar Migraciones&lt;/strong&gt;: &lt;code&gt;php artisan migrate&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Revertir Migraciones&lt;/strong&gt;: &lt;code&gt;php artisan migrate:rollback&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Refrescar Migraciones&lt;/strong&gt;: &lt;code&gt;php artisan migrate:refresh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Resetear Migraciones&lt;/strong&gt;: &lt;code&gt;php artisan migrate:reset&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;comandos-de-tareas-programadas&#34;&gt;Comandos de Tareas Programadas&lt;/h2&gt;
+&lt;p&gt;Para manejar tareas programadas o cron jobs.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ejecutar Tareas Programadas&lt;/strong&gt;: &lt;code&gt;php artisan schedule:run&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;comandos-de-caché&#34;&gt;Comandos de Caché&lt;/h2&gt;
+&lt;p&gt;Estos comandos son útiles para gestionar diferentes tipos de caché.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Limpiar Caché&lt;/strong&gt;: &lt;code&gt;php artisan cache:clear&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Limpiar Caché de Configuración&lt;/strong&gt;: &lt;code&gt;php artisan config:clear&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Limpiar Caché de Rutas&lt;/strong&gt;: &lt;code&gt;php artisan route:clear&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Limpiar Caché de Vistas&lt;/strong&gt;: &lt;code&gt;php artisan view:clear&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;comandos-de-pruebas&#34;&gt;Comandos de Pruebas&lt;/h2&gt;
+&lt;p&gt;Para ejecutar pruebas unitarias y de integración.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ejecutar Pruebas&lt;/strong&gt;: &lt;code&gt;php artisan test&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;comandos-de-rutas&#34;&gt;Comandos de Rutas&lt;/h2&gt;
+&lt;p&gt;Para trabajar con rutas.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Listar Rutas&lt;/strong&gt;: &lt;code&gt;php artisan route:list&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;otros-comandos-útiles&#34;&gt;Otros Comandos Útiles&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Limpiar Cache de la Aplicación&lt;/strong&gt;: &lt;code&gt;php artisan optimize&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Crear Enlace Simbólico para Almacenamiento&lt;/strong&gt;: &lt;code&gt;php artisan storage:link&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Directivas Blade</title>
+      <link>http://localhost:43029/contenido/laravel/docs/100_cheatseet/blade/</link>
+      <pubDate>Sat, 08 Apr 2023 18:21:47 +0200</pubDate>
+      
+      <guid>http://localhost:43029/contenido/laravel/docs/100_cheatseet/blade/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;directivas-de-blade-en-laravel&#34;&gt;Directivas de Blade en Laravel&lt;/h1&gt;
+&lt;h2 id=&#34;qué-son-las-directivas-de-blade&#34;&gt;¿Qué son las Directivas de Blade?&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      Las directivas de Blade
+&lt;/span&gt;
+ en Laravel &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      son instrucciones especiales
+&lt;/span&gt;
+ en las plantillas Blade que proporcionan una forma sencilla y expresiva de:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      Controlar
+&lt;/span&gt;
+ la lógica de las vistas&lt;/li&gt;
+&lt;li&gt;Permiten incorporar &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      estructuras de control
+&lt;/span&gt;
+ de PHP&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      Funcionalidades específicas de Laravel
+&lt;/span&gt;
+ directamente en las plantillas Blade.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;principales-directivas-de-blade&#34;&gt;Principales Directivas de Blade&lt;/h2&gt;
+&lt;h3 id=&#34;estructuras-de-control&#34;&gt;Estructuras de Control&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      &lt;code&gt;@if&lt;/code&gt;, &lt;code&gt;@elseif&lt;/code&gt;, &lt;code&gt;@else&lt;/code&gt;
+&lt;/span&gt;
+: Condicionales.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      &lt;code&gt;@foreach&lt;/code&gt;, &lt;code&gt;@for&lt;/code&gt;, &lt;code&gt;@while&lt;/code&gt;
+&lt;/span&gt;
+: Bucles.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      &lt;code&gt;@switch&lt;/code&gt;, &lt;code&gt;@case&lt;/code&gt;, &lt;code&gt;@break&lt;/code&gt;, &lt;code&gt;@default&lt;/code&gt;
+&lt;/span&gt;
+: Estructura switch.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;autenticación-y-autorización&#34;&gt;Autenticación y Autorización&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      &lt;code&gt;@auth&lt;/code&gt;, &lt;code&gt;@guest&lt;/code&gt;
+&lt;/span&gt;
+: Directivas para comprobar si el usuario está autenticado o no.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      &lt;code&gt;@can&lt;/code&gt;, &lt;code&gt;@cannot&lt;/code&gt;
+&lt;/span&gt;
+: Directivas para comprobar permisos basados en roles.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;inclusión-y-herencia-de-plantillas&#34;&gt;Inclusión y Herencia de Plantillas&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      &lt;code&gt;@extends&lt;/code&gt;
+&lt;/span&gt;
+: Define la plantilla padre.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      &lt;code&gt;@section&lt;/code&gt;, &lt;code&gt;@yield&lt;/code&gt;
+&lt;/span&gt;
+: Define y muestra una sección de contenido.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      &lt;code&gt;@include&lt;/code&gt;
+&lt;/span&gt;
+: Incluye otra plantilla Blade.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;otros&#34;&gt;Otros&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      &lt;code&gt;@csrf&lt;/code&gt;
+&lt;/span&gt;
+: Genera un campo de token CSRF.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      &lt;code&gt;@method&lt;/code&gt;
+&lt;/span&gt;
+: Define un método HTTP para formularios.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      &lt;code&gt;@slot&lt;/code&gt;, &lt;code&gt;@component&lt;/code&gt;
+&lt;/span&gt;
+: Trabajar con componentes y slots.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      &lt;code&gt;@php&lt;/code&gt;, &lt;code&gt;@endphp&lt;/code&gt;
+&lt;/span&gt;
+: Ejecutar código PHP directamente.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Estas directivas simplifican la implementación de lógica compleja en las vistas, manteniendo el código limpio y fácil de leer. Blade convierte estas directivas en código PHP apropiado durante el proceso de renderizado de las vistas.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Modelos y Eloquent</title>
+      <link>http://localhost:43029/contenido/laravel/docs/100_cheatseet/modelos/</link>
+      <pubDate>Sat, 08 Apr 2023 18:21:47 +0200</pubDate>
+      
+      <guid>http://localhost:43029/contenido/laravel/docs/100_cheatseet/modelos/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;eloquent-cheat-sheet&#34;&gt;Eloquent Cheat Sheet&lt;/h1&gt;
+&lt;h2 id=&#34;obtención-y-búsqueda&#34;&gt;Obtención y Búsqueda&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Model::all()&lt;/code&gt; - Recupera todos los registros.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Model::get()&lt;/code&gt; - Obtiene una colección de modelos basada en una consulta.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Model::find($id)&lt;/code&gt; - Encuentra un modelo por su clave primaria.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Model::findOrFail($id)&lt;/code&gt; - Encuentra un modelo por su clave primaria o lanza un error si no se encuentra.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Model::first()&lt;/code&gt; - Obtiene el primer registro encontrado en la base de datos.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Model::where(&#39;column&#39;, &#39;value&#39;)&lt;/code&gt; - Aplica una condición a la consulta.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;creación-y-actualización&#34;&gt;Creación y Actualización&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Model::create($data)&lt;/code&gt; - Crea un nuevo registro en la base de datos.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Model::updateOrCreate($attributes, $values)&lt;/code&gt; - Actualiza un modelo o lo crea si no existe.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Model::findOrFail($id)-&amp;gt;update($data)&lt;/code&gt; - Actualiza un modelo existente o lanza un error si no se encuentra.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;eliminación&#34;&gt;Eliminación&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Model::destroy($id)&lt;/code&gt; - Elimina un modelo por su clave primaria.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Model::findOrFail($id)-&amp;gt;delete()&lt;/code&gt; - Elimina un modelo existente o lanza un error si no se encuentra.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;relaciones&#34;&gt;Relaciones&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Model::with(&#39;relation&#39;)&lt;/code&gt; - Eager load de una relación.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Model::has(&#39;relation&#39;)&lt;/code&gt; - Aplica una condición de existencia de una relación.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;otros&#34;&gt;Otros&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Model::count()&lt;/code&gt; - Cuenta el número de registros.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Model::orderBy(&#39;column&#39;, &#39;desc&#39;)&lt;/code&gt; - Ordena los resultados de la consulta.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Excepciones</title>
+      <link>http://localhost:43029/contenido/laravel/docs/100_cheatseet/exception/excepciones/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:43029/contenido/laravel/docs/100_cheatseet/exception/excepciones/</guid>
+      <description>
+        
+        
+        &lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Excepción&lt;/th&gt;
+&lt;th&gt;Descripción&lt;/th&gt;
+&lt;th&gt;Código HTTP&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ValidationException&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Error en la validación de datos, usualmente en formularios.&lt;/td&gt;
+&lt;td&gt;422&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;QueryException&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Problemas al realizar consultas a la base de datos.&lt;/td&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ModelNotFoundException&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No se encuentra un modelo en una consulta Eloquent.&lt;/td&gt;
+&lt;td&gt;404&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;AuthenticationException&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Fallo en la autenticación, usuario no identificado.&lt;/td&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;AuthorizationException&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;El usuario autenticado no tiene permiso para realizar una acción.&lt;/td&gt;
+&lt;td&gt;403&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;NotFoundHttpException&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Ruta o recurso no encontrado en la aplicación.&lt;/td&gt;
+&lt;td&gt;404&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;MethodNotAllowedHttpException&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Método HTTP usado en la solicitud no es válido para la ruta.&lt;/td&gt;
+&lt;td&gt;405&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;HttpException&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Excepción HTTP genérica para diferentes códigos de estado HTTP.&lt;/td&gt;
+&lt;td&gt;Depende del caso&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;MassAssignmentException&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Asignación masiva de datos a un modelo Eloquent no permitida.&lt;/td&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TokenMismatchException&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Fallo en la verificación del token CSRF en formularios.&lt;/td&gt;
+&lt;td&gt;419&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ErrorException&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Error genérico de PHP.&lt;/td&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;FatalErrorException&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Error fatal en PHP, como problemas de sintaxis o llamadas a funciones inexistentes.&lt;/td&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;OptimisticLockingFailureException&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Fallo en la concurrencia optimista, usualmente con Eloquent.&lt;/td&gt;
+&lt;td&gt;409&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Cheet Sheet</title>
+      <link>http://localhost:43029/contenido/laravel/docs/100_cheatseet/validaci%C3%B3n/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:43029/contenido/laravel/docs/100_cheatseet/validaci%C3%B3n/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;reglas-de-validación-comunes&#34;&gt;Reglas de Validación Comunes&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Regla&lt;/th&gt;
+&lt;th&gt;Descripción&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;required&lt;/td&gt;
+&lt;td&gt;Campo obligatorio.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;min:valor&lt;/td&gt;
+&lt;td&gt;Mínimo valor o tamaño.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;max:valor&lt;/td&gt;
+&lt;td&gt;Máximo valor o tamaño.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;between:min,max&lt;/td&gt;
+&lt;td&gt;Entre un rango.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;in:val1,val2&lt;/td&gt;
+&lt;td&gt;Debe ser uno de los valores listados.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;not_in:val1,val2&lt;/td&gt;
+&lt;td&gt;No debe ser uno de los valores listados.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;email&lt;/td&gt;
+&lt;td&gt;Debe ser un correo electrónico válido.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;url&lt;/td&gt;
+&lt;td&gt;Debe ser una URL válida.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;unique:tabla,campo&lt;/td&gt;
+&lt;td&gt;Debe ser único en la tabla especificada.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;exists:tabla,campo&lt;/td&gt;
+&lt;td&gt;Debe existir en la tabla especificada.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;date&lt;/td&gt;
+&lt;td&gt;Debe ser una fecha válida.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;numeric&lt;/td&gt;
+&lt;td&gt;Debe ser numérico.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;integer&lt;/td&gt;
+&lt;td&gt;Debe ser un entero.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;boolean&lt;/td&gt;
+&lt;td&gt;Debe ser booleano (true o false).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;confirmed&lt;/td&gt;
+&lt;td&gt;Debe tener un campo de confirmación correspondiente (ej: password y password_confirmation).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

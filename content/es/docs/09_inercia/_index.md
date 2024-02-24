@@ -48,5 +48,60 @@ Objeto children para pasar contenido de componentes a sus hijos
 
 {{% /pageinfo%}}
 
+## Crear nuevos registros
+## Editar un registro
+## Borrar registros
+## Listar registros
+
 ## Componente Link de inertia
 ## uso de la función route dentro de las propiedades de los componentes de react
+## Componente useFomr
+Es un componente que nos va a permitir trabajar de forma cómoda con formularios en reacto-insertia
+
+````js
+const form = useForm({
+    //nombres de los inputs de mi form
+    nombre:"",
+    dir:"",
+    //....
+});
+````
+
+Analizamos la función de validación del formulario
+***Sin useForm***
+```js
+function handleSubmit(e){
+    e.preventDefault();
+    setProcesing('true');
+    axios
+        .post(route('xxxx'),{datos})
+        .then((res)=>{
+            console.log(res)
+            setMessage("")
+            setErrors({})
+        })
+        .catch((error)=>{
+            if (error.response.status=422){
+                setErros(error.response.data.errors)
+            }
+        })
+
+
+
+}
+
+```
+***Con useForm***
+```js
+function handleSubmit(e){
+    e.preventDefault();
+    // setProcesing('true');
+    form
+    .post(route("xxxx"),{
+        onSuccess:()=>form.reset()
+        });
+ //no hace falta pasar los datos ya que están creados en la declaración de form
+
+}
+
+```

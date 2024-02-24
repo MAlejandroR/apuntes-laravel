@@ -1,0 +1,1219 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Máster en  Web – Plantillas en laravel</title>
+    <link>http://localhost:43029/contenido/laravel/docs/04_plantillas/</link>
+    <description>Recent content in Plantillas en laravel on Máster en  Web</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Sat, 08 Apr 2023 18:21:47 +0200</lastBuildDate>
+    
+	  <atom:link href="http://localhost:43029/contenido/laravel/docs/04_plantillas/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Plantillas en laravel</title>
+      <link>http://localhost:43029/contenido/laravel/docs/04_plantillas/01_blade/</link>
+      <pubDate>Sat, 08 Apr 2023 18:21:47 +0200</pubDate>
+      
+      <guid>http://localhost:43029/contenido/laravel/docs/04_plantillas/01_blade/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;plantillas-con-blade&#34;&gt;Plantillas con Blade&lt;/h2&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;blade&#34;&gt;Blade&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Una herramienta poderosa y flexible incluida en Laravel, que nos va a permitir &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+escribir html e incluir php y visualizar datos del servidor
+&lt;/span&gt;&lt;/p&gt;
+&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      balde.php
+&lt;/span&gt;
+ de una forma elegante y descriptiva. (Esto facilita visualizar datos  
+&lt;p&gt;Los ficheros blade, tienen extensión  &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+blade.php
+&lt;/span&gt;
+y estarán ubicados en la carpeta &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+./resources/view
+&lt;/span&gt;
+.&lt;br&gt;
+Cuando hagamos referencia a los ficheros blade, esta información &lt;strong&gt;no hay que especificar&lt;/strong&gt;, ni su &lt;strong&gt;ubicación&lt;/strong&gt;, ni su &lt;strong&gt;extensión&lt;/strong&gt;, como podemos ver en el siguiente ejemplo&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;return&lt;/span&gt; view(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;welcome&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#228b22&#34;&gt;//Va a retornar el fichero ./resources/view/welcome.blade.php
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;h3 id=&#34;contenido-de-un-fichero-blade&#34;&gt;Contenido de un fichero blade&lt;/h3&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Dentro de un fichero blade&lt;/strong&gt; &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+(.blade.php)
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;En él podemos  encontrar el siguiente tipo de &lt;strong&gt;código o instrucciones&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+    Código html y js
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/span&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(como cualquier página html)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+    {{}} Doble braquets
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/span&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Para mostrar el contenido de variables PHP.   &lt;br&gt;
+Blade automáticamente escapa el HTML en las variables para evitar ataques XSS.     &lt;br&gt;
+También para comentar, en lugar de &lt;strong&gt;&amp;lt;!- - Comentario html - -&amp;gt;&lt;/strong&gt;, podemos usar  &lt;strong&gt;{{- - Comentario html - -}}&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+    @
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/span&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;para utilizar directivas/estructuras de control propias de laravel, como como condicionales y bucles. Por ejemplo, @if, @foreach, @switch, entre otras.
+También acciones propias de laravel con sus directivas, como heredar de una plantilla o incluir en una determinada sección un código html como veremos a continuación en las herecias&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{--Especificamos que heredamos la estructura de esta página--}}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;extends&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;layouts.layout&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{--    Especificamos que aportamos contenido específico para una sección--}}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;@&lt;/span&gt;section (&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;contenido&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;  &amp;lt;h1&amp;gt;About us&amp;lt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;/h1&amp;gt; {{--Código html normal--}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt;($user) {{--Directiva de tipo &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;if&lt;/span&gt; (se sustituirá por código php)--}}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;h1&amp;gt;Estás autenticado&amp;lt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;/h1&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;@&lt;/span&gt;endif    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a61717;background-color:#e3d2d2&#34;&gt;@&lt;/span&gt;endsection&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;h3 id=&#34;herencia-creando-un-layout&#34;&gt;Herencia: Creando un layout&lt;/h3&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;h4 id=&#34;concepto&#34;&gt;Concepto&lt;/h4&gt;
+&lt;p&gt;En el desarrollo web con Laravel, &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+la herencia en las plantillas Blade
+&lt;/span&gt;
+proporciona una forma eficiente de garantizar &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+una estructura consistente en todas las páginas
+&lt;/span&gt;
+, fomentando un diseño corporativo uniforme.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;h4 id=&#34;idea-de-su-usofuncionamiento&#34;&gt;Idea de su uso/funcionamiento&lt;/h4&gt;
+&lt;p&gt;Con este concepto &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+se establece una página inicial o ’layout’ que define los aspectos generales de la interfaz, dejando espacios designados para personalizaciones específicas
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Con ello, cada página individual &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+hereda de esta plantilla principal
+&lt;/span&gt;
+, permitiendo inlcuir su propio contenido &lt;strong&gt;(el de la página)&lt;/strong&gt;  sin perder la coherencia visual &lt;strong&gt;(el de la plantilla)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Este método facilita la gestión y mantenimiento del diseño, ya que cualquier cambio realizado en la plantilla principal se reflejará automáticamente en todas las páginas que heredan de ella. De este modo, la herencia en las plantillas Blade contribuye a una experiencia de desarrollo eficiente y a la creación de interfaces consistentes y atractivas.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;comentarios-blade&#34;&gt;Comentarios blade&lt;/h3&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;insertando-comentarios-en-fichero-bladephp&#34;&gt;Insertando comentarios en fichero .blade.php&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;Dentro de un fichero &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+Blade
+&lt;/span&gt;
+, podemos comentar de dos maneras&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Comentarios HTML (&lt;code&gt;&amp;lt;!-- Comentarios --&amp;gt;&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Comentarios Blade (&lt;code&gt;{{-- Comentarios --}}&lt;/code&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hay diferencias significativas entre comentar con &lt;code&gt;&amp;lt;!-- Comentarios --&amp;gt;&lt;/code&gt; y &lt;code&gt;{{-- Comentarios --}}&lt;/code&gt; en un fichero Blade de Laravel.     &lt;br&gt;
+Estas diferencias se relacionan principalmente con cómo se manejan y se muestran estos comentarios en el HTML generado y enviado al navegador.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Comentarios HTML (&lt;code&gt;&amp;lt;!-- Comentarios --&amp;gt;&lt;/code&gt;):&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Son comentarios estándar de HTML.&lt;/li&gt;
+&lt;li&gt;Serán visibles en el código fuente del HTML generado y enviado al navegador.&lt;/li&gt;
+&lt;li&gt;Cualquiera que inspeccione el código fuente de la página en el navegador podrá ver estos comentarios.&lt;/li&gt;
+&lt;li&gt;Son útiles para anotaciones que no afectan la presentación de la página pero podrían ser de ayuda durante el desarrollo o para otros desarrolladores.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Comentarios Blade (&lt;code&gt;{{-- Comentarios --}}&lt;/code&gt;):&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Son específicos del motor de plantillas Blade de Laravel.&lt;/li&gt;
+&lt;li&gt;No serán incluidos en el HTML final generado. Esto significa que no aparecerán en el código fuente de la página cuando se vea en un navegador.&lt;/li&gt;
+&lt;li&gt;Son útiles para dejar notas o comentarios en el código que solo deben ser visibles durante el desarrollo y no deben ser expuestos a los usuarios finales o en el ambiente de producción.&lt;/li&gt;
+&lt;li&gt;Proporcionan una manera de hacer anotaciones en las plantillas Blade sin afectar lo que ve el usuario.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Diseñando el layout</title>
+      <link>http://localhost:43029/contenido/laravel/docs/04_plantillas/02_creandodise%C3%B1o/</link>
+      <pubDate>Sat, 08 Apr 2023 18:21:47 +0200</pubDate>
+      
+      <guid>http://localhost:43029/contenido/laravel/docs/04_plantillas/02_creandodise%C3%B1o/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;creando-un-diseño&#34;&gt;Creando un diseño&lt;/h2&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;proceso-de-diseño&#34;&gt;Proceso de diseño&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;Diseñar es un aspecto fundamentan antes de crear las páginas  &lt;br&gt;
+Para crear un proyecto debemos crear previaemnte &lt;strong&gt;los mockups&lt;/strong&gt; o &lt;strong&gt;Prototipados de pantallas&lt;/strong&gt; &lt;br&gt;
+Posteriormente hemos de crear las páginas usando los estilos adecuados para conseguir los diseños previamente prototipados, esto implicará usar &lt;strong&gt;html y css&lt;/strong&gt;
+Para crear los diseños se usan herramientas gráficas de prototipado, y para el css normalmente usaremos algún fremework tipo &lt;strong&gt;Bootstrap&lt;/strong&gt; o &lt;strong&gt;tailwindcss&lt;/strong&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h3 id=&#34;herramientas-para-el-diseño&#34;&gt;Herramientas para el diseño&lt;/h3&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;h4 id=&#34;heading&#34;&gt;&lt;/h4&gt;
+&lt;p&gt;Vamos a usar &lt;strong&gt;Balsamiq&lt;/strong&gt; porque disponemos de licencia estudiante en el centro &lt;br&gt;
+Existen varias herramientas alternativas:&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://pencil.evolus.vn/&#34;&gt;Pencil Project&lt;/a&gt;:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Pencil Project es una herramienta de prototipado de código abierto que te permite crear mockups de manera sencilla. Es fácil de usar y ofrece una variedad de elementos predefinidos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.mockflow.com/&#34;&gt;MockFlow&lt;/a&gt;:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;MockFlow es una plataforma en línea que ofrece una herramienta de diseño de wireframes y mockups. La versión gratuita tiene algunas limitaciones, pero aún así proporciona funcionalidades útiles.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://balsamiq.cloud/&#34;&gt;Balsamiq Cloud (versión gratuita)&lt;/a&gt; ):&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Balsamiq, conocido por su aplicación de escritorio, también ofrece una versión en línea gratuita llamada Balsamiq Cloud que permite crear mockups y wireframes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.figma.com/&#34;&gt;Figma&lt;/a&gt;:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Figma es una herramienta de diseño colaborativo en línea que permite crear mockups, wireframes y prototipos. Tiene una versión gratuita con muchas funcionalidades.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://wireframe.cc/&#34;&gt;Wireframe.cc&lt;/a&gt;:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Wireframe.cc es una herramienta simple y fácil de usar para crear wireframes rápidos y sencillos. Puedes comenzar a usarla directamente en el navegador.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;/div&gt;
+
+&lt;h3 id=&#34;laravel-como-fullstack&#34;&gt;Laravel como fullstack&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Laravel es un poderoso framework de backend.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Con Laravel, es posible realizar &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      desarrollos web full-stack
+&lt;/span&gt;
+. Esto  significa que este framework nos habilita para gestionar tanto &lt;strong&gt;el backend como el frontend&lt;/strong&gt; de una aplicación web.&lt;br&gt;
+Así, Laravel se convierte en &lt;strong&gt;una solución integral&lt;/strong&gt; que permite implementar todas las facetas del desarrollo web, desde la lógica del servidor hasta la interfaz de usuario.&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Recuerda&lt;/h4&gt;
+
+    &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      Laravel
+&lt;/span&gt;
+Permite integrar de &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      forma agnóstica
+&lt;/span&gt;
+ cualquier herramienta para el front.     
+&lt;p&gt;Muchos paquetes traen integrado los framework &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+tailwind
+&lt;/span&gt;
+y   &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+vue
+&lt;/span&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h3 id=&#34;instalación-de-tailwindhttpstailwindcsscom-framework-de-css&#34;&gt;Instalación de &lt;a href=&#34;https://tailwindcss.com/&#34;&gt;Tailwind&lt;/a&gt;: framework de css&lt;/h3&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;h4 id=&#34;introducción&#34;&gt;&lt;strong&gt;Introducción&lt;/strong&gt;&lt;/h4&gt;
+&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      Tailwind CSS
+&lt;/span&gt;
+  es un poderoso framework de estilos de CSS que se puede utilizar de manera efectiva con Laravel.    
+&lt;p&gt;La  simplicidad y flexibilidad de &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+Tailwind
+&lt;/span&gt;
+permiten una integración fluida con proyectos Laravel, y es común ver su uso en conjunción con este framework de PHP.&lt;/p&gt;
+&lt;p&gt;Muchos paquetes y recursos integrados en el ecosistema de Laravel incorporan Tailwind CSS como herramienta preferida para la estilización de componentes y diseños, por ese motivo lo vamos a utilizar en este curso.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;instalación&#34;&gt;&lt;strong&gt;Instalación&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;pageinfo pageinfo-info&#34;&gt;
+&lt;p&gt;Para la instalación necesitamos herramientas para gestionar paquetes del cliente &lt;strong&gt;node y npm&lt;/strong&gt;, y vamos a usar &lt;strong&gt;vite&lt;/strong&gt; como herramienta de compilación (traspilación) de ficheros en el frontend&lt;/p&gt;
+&lt;hr&gt;
+&lt;h5 id=&#34;node-y-npm&#34;&gt;&lt;strong&gt;Node y npm&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://nodejs.org/&#34;&gt;Node&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 410px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://localhost:43029/contenido/laravel/contenido/laravel/docs/04_plantillas/02_creandodise%C3%B1o/node_hubdecfba6e876dc13b2e831edcc92370d_4452_400x100_fill_box_smart1_3.png&#34; width=&#34;400&#34; height=&#34;100&#34;&gt;
+&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;Descarga e instala Node.js desde el &lt;a href=&#34;https://nodejs.org/&#34;&gt;sitio web oficial&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Antes de integrar Tailwind CSS en tu proyecto Laravel, necesitarás tener Node.js instalado.
+&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+node
+&lt;/span&gt;
+y&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+npm
+&lt;/span&gt;
+son Gestores de paquetes para el front
+Van a crear un fichero llamado &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+pakage.json (vs composer.json)
+&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Al ejecutar &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+npm install
+&lt;/span&gt;
+,  se creará en el proyecto una carpeta llamada &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+node_modules
+&lt;/span&gt;
+, donde se instalarán los paquetes especificados en el fichero json.&lt;br&gt;
+Este directorio &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+node_modules
+&lt;/span&gt;
+tampoco hay que subir a git, ya que lo podremos generar a partir del fichero &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+pakage.json
+&lt;/span&gt;
+.  &lt;br&gt;
+Su instalación es sencilla. Una vez instalado cerramos el terminal y al volverlo a abrir, ya lo podemos utilizar.&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 2010px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://localhost:43029/contenido/laravel/contenido/laravel/docs/04_plantillas/02_creandodise%C3%B1o/node_install_hu464834241a03de8b3dd3f81a919c4e01_99273_2000x900_fill_q75_box_smart1.jpg&#34; width=&#34;2000&#34; height=&#34;900&#34;&gt;
+&lt;/figure&gt;
+&lt;hr&gt;
+&lt;h5 id=&#34;tailwindcss&#34;&gt;&lt;strong&gt;Tailwindcss&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://tailwindcss.com/docs/installation/framework-guides&#34;&gt;Tailwindcss&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 410px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://localhost:43029/contenido/laravel/contenido/laravel/docs/04_plantillas/02_creandodise%C3%B1o/tailwindcss_hu23c382a8d558e75a25a82f6f9b2c26cd_3445_400x100_fill_box_smart1_3.png&#34; width=&#34;400&#34; height=&#34;100&#34;&gt;
+&lt;/figure&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 2010px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://localhost:43029/contenido/laravel/contenido/laravel/docs/04_plantillas/02_creandodise%C3%B1o/instalar_tailwind1_hu60782e99de444cef6d31451aa58249c4_435654_2000x1000_fill_q75_box_smart1.jpg&#34; width=&#34;2000&#34; height=&#34;1000&#34;&gt;
+&lt;/figure&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 2010px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://localhost:43029/contenido/laravel/contenido/laravel/docs/04_plantillas/02_creandodise%C3%B1o/instalar_tailwind2_hu60782e99de444cef6d31451aa58249c4_389955_2000x1000_fill_q75_box_smart1.jpg&#34; width=&#34;2000&#34; height=&#34;1000&#34;&gt;
+&lt;/figure&gt;
+&lt;hr&gt;
+&lt;h5 id=&#34;vite&#34;&gt;&lt;strong&gt;Vite&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://vitejs.dev/&#34;&gt;Vite&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 310px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://localhost:43029/contenido/laravel/contenido/laravel/docs/04_plantillas/02_creandodise%C3%B1o/vite_hu81d3fefb716694ae1544a9aef9bc60ec_3521_300x100_fill_q75_box_smart1.jpeg&#34; width=&#34;300&#34; height=&#34;100&#34;&gt;
+&lt;/figure&gt;
+&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      Vite
+&lt;/span&gt;
+ en un proyecto Laravel es un moderno entorno de &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      construcción frontend
+&lt;/span&gt;
+ que proporciona una compilación (transpilación)rápida y eficiente de los recursos del front para ponerlos disponibles en ejecución.
+&lt;hr&gt;
+&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      Vite
+&lt;/span&gt;
+, por ejemplo, &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      transpila archivos SCSS o LESS a CSS
+&lt;/span&gt;
+, &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      procesa las directivas de Tailwind CSS para generar clases CSS utilizables
+&lt;/span&gt;
+.                       
+&lt;hr&gt;
+&lt;p&gt;Además, &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+compila componentes de Vue o React a JavaScript
+&lt;/span&gt;
+, facilitando su ejecución en el navegador.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;h3 id=&#34;diseño-del-layout&#34;&gt;Diseño del layout&lt;/h3&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;h4 id=&#34;planteamos-el-siguiente-layout-general&#34;&gt;Planteamos el siguiente layout general&lt;/h4&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 1903px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://localhost:43029/contenido/laravel/contenido/laravel/docs/04_plantillas/02_creandodise%C3%B1o/Plantilla_detalle_hu2f15c5bd7f024699ad28f1bddd4198bd_834345_1900x1000_fit_box_3.png&#34; width=&#34;1893&#34; height=&#34;1000&#34;&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;Para conseguirlo escribimos el siguiente código&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;14
+&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;15
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;16
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;17
+&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;18
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;19
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;20
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;21
+&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;22
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;23
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;24
+&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;25
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;26
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;27
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;28
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;29
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;!doctype html&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;html lang=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &amp;lt;head&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;       @vite([&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;resources/css/app.css&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;resources/js/app.js&amp;#39;&lt;/span&gt;])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &amp;lt;/head&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &amp;lt;body&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;      &amp;lt;header class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;lg:hidden bg-header flex flex-col justify-center items-center  py-2 space-y-1&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         HEADER MÓVIL
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &amp;lt;/header&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;      &amp;lt;header class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;hidden lg:flex h-15v bg-header flex flex-row justify-center items-center&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         HEADER DESKTOP
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &amp;lt;/header&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &amp;lt;nav&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;          &amp;lt;nav class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;hidden lg:flex h-10v bg-nav flex flex-row justify-start items-center space-x-2&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            NAV MÓVIL
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &amp;lt;/nav&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;          &amp;lt;nav class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;lg:hidden bg-nav flex flex-col justify-start space-y-1 px-2&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            NAV DESKTOP
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &amp;lt;/nav&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &amp;lt;/nav&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;      &amp;lt;main class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;h-65v bg-main&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;          @&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;yield&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;contenido&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &amp;lt;/main&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;      &amp;lt;footer  class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;h-10v bg-footer footer items-center p-4 bg-neutral text-neutral-content&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         FOOTER          
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &amp;lt;/footer&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &amp;lt;/body&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;h4 id=&#34;diseño-de-la-cabecera-hahahugoshortcode9s6hbhb&#34;&gt;Diseño de la cabecera &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      header
+&lt;/span&gt;
+&lt;/h4&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 1934px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://localhost:43029/contenido/laravel/contenido/laravel/docs/04_plantillas/02_creandodise%C3%B1o/header_hu3c54109e2e95110bd61f8406fa5c0285_95864_4000x900_fit_box_3.png&#34; width=&#34;1924&#34; height=&#34;702&#34;&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;Escribimos el siguiente código&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;14
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &amp;lt;header class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;lg:hidden bg-header flex flex-col justify-center items-center  py-2 space-y-1&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        &amp;lt;img class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;h-3/5&amp;#34;&lt;/span&gt; src=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;{{asset(&amp;#34;&lt;/span&gt;images/logos/nett_logo.png&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;)}}&amp;#34;&lt;/span&gt; alt=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;logo nett&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        &amp;lt;button class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;h-1/5 w-full btn bg-main &amp;#34;&lt;/span&gt;&amp;gt; Acceder&amp;lt;/button&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        &amp;lt;button class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;h-1/5 w-full btn  bg-main&amp;#34;&lt;/span&gt;&amp;gt;Registrar&amp;lt;/button&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;/header&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;header class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;hidden lg:flex h-15v bg-header flex flex-row justify-center items-center&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        &amp;lt;img class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;w-1/5 max-h-full w-auto  p-5 &amp;#34;&lt;/span&gt; src=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;{{asset(&amp;#34;&lt;/span&gt;images/logos/nett_logo.png&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;)}}&amp;#34;&lt;/span&gt; alt=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;logo nett&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        &amp;lt;div class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;w-3/5 flex justify-center items-center&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;            &amp;lt;h1 class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;text-3xl text-white h-auto max-w-full truncate &amp;#34;&lt;/span&gt;&amp;gt;APLICACIÓN EJEMPLO LARAVEL&amp;lt;/h1&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        &amp;lt;div class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34; w-1/5 h-auto max-w-full flex items-center space-x-4 &amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;            &amp;lt;button class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;btn glass  text-white&amp;#34;&lt;/span&gt;&amp;gt; Acceder&amp;lt;/button&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;            &amp;lt;button class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;btn  glass text-white&amp;#34;&lt;/span&gt;&amp;gt;Registrar&amp;lt;/button&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;/header&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;h4 id=&#34;diseño-de-la-sección-de-menú--hahahugoshortcode9s8hbhb&#34;&gt;Diseño de la sección de menú:  &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      nav
+&lt;/span&gt;
+&lt;/h4&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 1796px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://localhost:43029/contenido/laravel/contenido/laravel/docs/04_plantillas/02_creandodise%C3%B1o/nav_hu299110349de9135cb16681ebe47379d8_74644_2000x1000_fit_box_3.png&#34; width=&#34;1786&#34; height=&#34;702&#34;&gt;
+&lt;/figure&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Escribimos el siguiente código&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;14
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;15
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;16
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &amp;lt;nav class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;hidden lg:flex h-10v bg-nav flex flex-row justify-start items-center space-x-2&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        &amp;lt;a href=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;{{ route(&amp;#39;home&amp;#39;) }}&amp;#34;&lt;/span&gt; class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;btn &amp;#34;&lt;/span&gt;&amp;gt;Inicio&amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        &amp;lt;a href=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;{{ route(&amp;#39;about&amp;#39;) }}&amp;#34;&lt;/span&gt; class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;btn &amp;#34;&lt;/span&gt;&amp;gt;Acerca de Nosotros&amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        &amp;lt;a href=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;{{ route(&amp;#39;projects&amp;#39;) }}&amp;#34;&lt;/span&gt; class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;btn&amp;#34;&lt;/span&gt;&amp;gt;Proyectos&amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        &amp;lt;a href=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;{{ route(&amp;#39;contact&amp;#39;) }}&amp;#34;&lt;/span&gt; class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;btn&amp;#34;&lt;/span&gt;&amp;gt;Contacto&amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        &amp;lt;a href=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;{{ route(&amp;#39;students&amp;#39;) }}&amp;#34;&lt;/span&gt; class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;btn&amp;#34;&lt;/span&gt;&amp;gt;Alumnos&amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        @&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;yield&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;nav&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;    &amp;lt;/nav&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;nav class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;lg:hidden bg-nav flex flex-col justify-start space-y-1 px-2&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;a href=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;{{ route(&amp;#39;home&amp;#39;) }}&amp;#34;&lt;/span&gt; class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;btn btn-primary  &amp;#34;&lt;/span&gt;&amp;gt;Inicio&amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        &amp;lt;a href=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;{{ route(&amp;#39;about&amp;#39;) }}&amp;#34;&lt;/span&gt; class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;btn btn-primary&amp;#34;&lt;/span&gt;&amp;gt;Acerca de Nosotros&amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        &amp;lt;a href=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;{{ route(&amp;#39;projects&amp;#39;) }}&amp;#34;&lt;/span&gt; class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;btn btn-primary&amp;#34;&lt;/span&gt;&amp;gt;Proyectos&amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        &amp;lt;a href=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;{{ route(&amp;#39;contact&amp;#39;) }}&amp;#34;&lt;/span&gt; class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;btn btn-primary&amp;#34;&lt;/span&gt;&amp;gt;Contacto&amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        &amp;lt;a href=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;{{ route(&amp;#39;students&amp;#39;) }}&amp;#34;&lt;/span&gt; class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;btn btn-primary&amp;#34;&lt;/span&gt;&amp;gt;Alumnos&amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        @&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;yield&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;nav&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;    &amp;lt;/nav&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;helper route&lt;/h4&gt;
+
+    El helper &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+route
+&lt;/span&gt;
+llama a una ruta creada con un nombre en el fichero &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+routes/web.php
+&lt;/span&gt;
+
+&lt;/div&gt;
+
+**&lt;/p&gt;
+&lt;h4 id=&#34;diseño-de-la-sección-de-principal---hahahugoshortcode9s11hbhb&#34;&gt;Diseño de la sección de principal :  &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      main
+&lt;/span&gt;
+&lt;/h4&gt;
+&lt;p&gt;En este caso vamos a escribir el contenido de una página &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      landing page
+&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;Para ello usaremos de la librería &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      &lt;a href=&#34;https://daisyui.com&#34;&gt;Daisy&lt;/a&gt;
+&lt;/span&gt;
+, el componente &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      &lt;a href=&#34;https://daisyui.com/components/hero/&#34;&gt;Hero&lt;/a&gt;
+&lt;/span&gt;
+
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 1774px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://localhost:43029/contenido/laravel/contenido/laravel/docs/04_plantillas/02_creandodise%C3%B1o/main_hu7acb315430cecee73425e92100bc2721_537377_2000x1000_fit_box_3.png&#34; width=&#34;1764&#34; height=&#34;702&#34;&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;Escribimos el siguiente código&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;&amp;lt;main class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;h-65v bg-main&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   @&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;yield&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;contenido&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/main&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+Y el contenido de la página &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      home.blade.php
+&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;14
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;15
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;@&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;extends&lt;/span&gt;(&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;layouts.layout&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;@section (&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;contenido&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;   &amp;lt;div class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;hero h-full&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;   style=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;      &amp;lt;div class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;hero-overlay bg-opacity-60&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;      &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;      &amp;lt;div class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;hero-content text-center text-neutral-content&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        &amp;lt;div class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;max-w-md&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;          &amp;lt;h1 class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;mb-5 text-5xl font-bold&amp;#34;&lt;/span&gt;&amp;gt;Bienvenido a nuestro proyecto de apredizaje&amp;lt;/h1&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;          &amp;lt;p class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;mb-5&amp;#34;&lt;/span&gt;&amp;gt;Accederás a las diferentes prácticas realizadas en las tutorías&amp;lt;/p&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;          &amp;lt;button class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;btn btn-primary&amp;#34;&lt;/span&gt;&amp;gt;Empezar&amp;lt;/button&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;        &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;      &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;@endsection&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;@extend&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;Establece una página de hereda de otra (un layout)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;@yield&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;Para establecer una sección dónde se aportará contenido en la página que herede de ella
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;@section @endsection&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;Para establecer contenido en una sección previamente establecida en el layout bajo la directiva &amp;lt;strong&amp;gt;yield&amp;lt;/strong&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;diseño-footer&#34;&gt;Diseño footer&lt;/h4&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;h4 id=&#34;heading&#34;&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;diseño-de-la-sección-de-pie-de-página---span-classfont-weight-bold-stylecolordarkblue&#34;&gt;Diseño de la sección de pie de página :  &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;  footer
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/span&gt;
+&lt;p&gt;En este caso vamos a escribir el contenido de una página &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+landing page
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;En este caso vamos a seleccionar un &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+footer
+&lt;/span&gt;
+de la página de &lt;a href=&#34;https://daisyui.com&#34;&gt;Daisy&lt;/a&gt;  boscamos en los componenetes &lt;a href=&#34;https://daisyui.com/components/footer/&#34;&gt;footer&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 1718px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://localhost:43029/contenido/laravel/contenido/laravel/docs/04_plantillas/02_creandodise%C3%B1o/footer_hu1dc9c36abc0a3e36787a8054e9013e55_52544_2000x1000_fit_box_3.png&#34; width=&#34;1708&#34; height=&#34;702&#34;&gt;
+&lt;/figure&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;11
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;12
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;13
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;14
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;15
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;16
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;17
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;18
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;19
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;20
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;21
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;22
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;23
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;24
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;25
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;26
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;27
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;28
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;29
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;30
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;&amp;lt;footer  class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;h-10v bg-footer footer items-center p-4 bg-neutral text-neutral-content&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;aside class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;items-center grid-flow-col&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;svg width=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;36&amp;#34;&lt;/span&gt; height=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;36&amp;#34;&lt;/span&gt; viewBox=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;0 0 24 24&amp;#34;&lt;/span&gt; xmlns=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;http://www.w3.org/2000/svg&amp;#34;&lt;/span&gt; fill-rule=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;evenodd&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;             clip-rule=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;evenodd&amp;#34;&lt;/span&gt; class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;fill-current&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &amp;lt;path
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                d=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/path&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;/svg&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;p&amp;gt;Copyright © &lt;span style=&#34;color:#b452cd&#34;&gt;2024&lt;/span&gt; - All right reserved&amp;lt;/p&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;/aside&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;nav class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;grid-flow-col gap-4 md:place-self-center md:justify-self-end&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &amp;lt;svg xmlns=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;http://www.w3.org/2000/svg&amp;#34;&lt;/span&gt; width=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;24&amp;#34;&lt;/span&gt; height=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;24&amp;#34;&lt;/span&gt; viewBox=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;0 0 24 24&amp;#34;&lt;/span&gt; class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;fill-current&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &amp;lt;path
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    d=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/path&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &amp;lt;/svg&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &amp;lt;svg xmlns=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;http://www.w3.org/2000/svg&amp;#34;&lt;/span&gt; width=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;24&amp;#34;&lt;/span&gt; height=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;24&amp;#34;&lt;/span&gt; viewBox=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;0 0 24 24&amp;#34;&lt;/span&gt; class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;fill-current&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &amp;lt;path
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    d=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/path&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &amp;lt;/svg&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &amp;lt;svg xmlns=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;http://www.w3.org/2000/svg&amp;#34;&lt;/span&gt; width=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;24&amp;#34;&lt;/span&gt; height=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;24&amp;#34;&lt;/span&gt; viewBox=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;0 0 24 24&amp;#34;&lt;/span&gt; class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;fill-current&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &amp;lt;path
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    d=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/path&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &amp;lt;/svg&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;/nav&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/footer&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Componentes </title>
+      <link>http://localhost:43029/contenido/laravel/docs/04_plantillas/03_componentes/</link>
+      <pubDate>Sat, 08 Apr 2023 18:21:47 +0200</pubDate>
+      
+      <guid>http://localhost:43029/contenido/laravel/docs/04_plantillas/03_componentes/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;introducción-a-los-componentes-de-blade-en-laravel&#34;&gt;Introducción a los Componentes de Blade en Laravel&lt;/h1&gt;
+&lt;h2 id=&#34;qué-son-los-componentes-de-blade&#34;&gt;¿Qué son los Componentes de Blade?&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      Los componentes de Blade
+&lt;/span&gt;
+ en Laravel son una poderosa herramienta para reutilizar código HTML y PHP en tus vistas.&lt;/p&gt;
+&lt;p&gt;Estos componentes son archivos &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      .blade.php
+&lt;/span&gt;
+ que residen en la carpeta &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      resources/views/components
+&lt;/span&gt;
+. Si la carpeta no existe, puedes crearla manualmente.&lt;/p&gt;
+&lt;p&gt;La idea clave en Laravel al trabajar con layouts y componentes &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      es descomponer un diseño complejo (layout) en elementos más pequeños y manejables
+&lt;/span&gt;
+, conocidos como &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      componentes
+&lt;/span&gt;
+.&lt;/p&gt;
+&lt;p&gt;Cada componente &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      es un archivo .blade.php
+&lt;/span&gt;
+ independiente, lo que facilita su reutilización y mantenimiento. Estos archivos, por defecto, &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      se almacenan en resources/views/components
+&lt;/span&gt;
+.&lt;/p&gt;
+&lt;p&gt;Al crear un layout, este se convierte en una composición de estos ficheros individuales. Cada componente representa &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      una parte del layout
+&lt;/span&gt;
+, como:  &lt;strong&gt;una cabecera, pie de página, sección principal o barra de navegación&lt;/strong&gt; como podemos ver en la siguiente imagen:&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 1443px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://localhost:43029/contenido/laravel/contenido/laravel/docs/04_plantillas/03_componentes/componentes_laravel_general_hu54ef246604fe80399d6e5ae724efb5d4_266246_2000x1000_fit_box_3.png&#34; width=&#34;1433&#34; height=&#34;606&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+
+&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;creación-y-uso-de-componentes&#34;&gt;Creación y Uso de Componentes&lt;/h2&gt;
+&lt;p&gt;Los componentes son ficheros html (como blade) por lo tanto &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      .blade.php
+&lt;/span&gt;
+ en &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      resources/views/components
+&lt;/span&gt;
+.&lt;/p&gt;
+&lt;h3 id=&#34;crear-un-componente&#34;&gt;Crear un Componente&lt;/h3&gt;
+&lt;p&gt;Tenemos dos formas de crear un componente:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      Crear el fichero directamente
+&lt;/span&gt;
+ en la carpeta correspondiente&lt;/li&gt;
+&lt;li&gt;A través de &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      una clase usando Artisan****
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;creando-el-componentes-directamente&#34;&gt;Creando el componentes directamente&lt;/h4&gt;
+&lt;p&gt;Simplemente creamos el fichero desde nuestro EDI. &lt;br&gt;
+En nuestro caso creamos los ficheros &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      header.blade,php, main.blade.php, nav.blade.php
+&lt;/span&gt;
+ y &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      footer.blade.php
+&lt;/span&gt;
+.&lt;/p&gt;
+&lt;p&gt;Como son parte del layout, podríamos crearlo dentro de una carpeta llamada layout, por cuestiones organizativas:
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 249px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://localhost:43029/contenido/laravel/contenido/laravel/docs/04_plantillas/03_componentes/creacion_componentes_layout_1_huba38c8723b571b48414f02f2f9cc99ff_12178_700x700_fit_box_3.png&#34; width=&#34;239&#34; height=&#34;227&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+
+
+&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;creando-el-componente-con-artisan&#34;&gt;Creando el componente con Artisan&lt;/h4&gt;
+&lt;p&gt;Podemos crearlo a partir de una clase. El funcionamiento es igual. La forma de crearlo sería con artisan:
+Vamos a hacerlo para nuestro ejemplo:
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;php artisan make:Component nombre_componente&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;h4 id=&#34;crear-componente-directo-vs-con-artisan&#34;&gt;Crear componente directo Vs con Artisan&lt;/h4&gt;
+&lt;h5 id=&#34;artisan&#34;&gt;&lt;strong&gt;Artisan&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;Usar &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      Artisan para crear componentes
+&lt;/span&gt;
+ tiene ventajas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      Estructura Consistente
+&lt;/span&gt;
+: Artisan genera automáticamente la estructura de archivos necesaria, asegurando consistencia en todo el proyecto.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      Rapidez
+&lt;/span&gt;
+ y &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      Conveniencia
+&lt;/span&gt;
+: Es rápido y evita la posibilidad de errores al crear los archivos manualmente.
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      Comandos Claros
+&lt;/span&gt;
+: Los comandos de Artisan son claros y documentados, lo que facilita su uso y aprendizaje.
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;  php artisan make:component NombreDelComponente&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+Si queremos crear el componente en una carpeta concreta lo podemos hacer especificandolo
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;    php artisan make:component directorio/.../NombreDelComponente&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Esto crea un nuevo componente en &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      resources/views/components
+&lt;/span&gt;
+ y un archivo de clase correspondiente en &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      app/View/Components
+&lt;/span&gt;
+.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;crear-componentes-manualmente&#34;&gt;&lt;strong&gt;Crear Componentes Manualmente&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      Crear componentes manualmente
+&lt;/span&gt;
+ también buena que te da más control en la estructura y organización de carpetas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      Flexibilidad
+&lt;/span&gt;
+: Tienes control total sobre la estructura y organización de tus archivos.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+      Simplicidad
+&lt;/span&gt;
+: Para proyectos más pequeños o si prefieres un enfoque más &amp;ldquo;manual&amp;rdquo;, este método puede ser más directo.
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;h4 id=&#34;heading&#34;&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Para crear un componente manualmente:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;Crea un archivo Blade en &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+resources/views/components
+&lt;/span&gt;
+.&lt;/li&gt;
+&lt;li&gt;Opcionalmente, crea una clase de componente en &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+app/View/Components
+&lt;/span&gt;
+.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;/div&gt;
+
+
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Conclusión personal&lt;/h4&gt;
+
+    &lt;ul&gt;
+&lt;li&gt;Proyectos Grandes o en Equipos:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Usar Artisan es generalmente más recomendado, ya que asegura una estructura coherente y reduce el riesgo de errores.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Para Proyectos Pequeños o Preferencias Personales:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Si prefieres un control más directo o trabajas en un proyecto más pequeño, crear los archivos manualmente puede ser igualmente efectivo.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;referenciar-un-componente&#34;&gt;Referenciar un Componente&lt;/h3&gt;
+&lt;p&gt;Para usar un componente en tus vistas Blade, lo referencias como un elemento HTML, pero con una sintaxis especial que incluye un prefijo &lt;code&gt;x-&lt;/code&gt;::&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;x-miComponente&lt;/span&gt; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;x-nombre&lt;/h4&gt;
+
+    Cuando referenciamos un elemento con &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+&amp;lt;x-…&amp;gt;
+&lt;/span&gt;
+laravel buscará el fichero en la carpeta &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+resources/views/components
+&lt;/span&gt;
+
+&lt;/div&gt;
+
+
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;x-capeta.sub.nombre&lt;/h4&gt;
+
+    &lt;p&gt;Si el componentes estuvier en subcarpetas, lo podemos especicar con puntos.&lt;/p&gt;
+&lt;p&gt;De esta forma &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+x-capeta.sub.componentes
+&lt;/span&gt;
+implicará la ubicaicón en &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+resources/views/components/carpeta/sub/nombre.blade.php
+&lt;/span&gt;&lt;/p&gt;
+
+
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;nuestro-ejemplo&#34;&gt;Nuestro ejemplo&lt;/h2&gt;
+&lt;p&gt;Creamos los componentes usando artisan.
+
+
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Ubicación&lt;/h4&gt;
+
+    Como todos son para el layout, los creamos en la carpeta layout
+
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;php artisan make:component layout/Header
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;php artisan make:component layout/Nav
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;php artisan make:component layout/Main
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;php artisan make:component layout/Footer&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+La imagen muestra el resultado generado
+
+
+
+
+
+
+
+&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;http://localhost:43029/contenido/laravel/contenido/laravel/docs/04_plantillas/03_componentes/img_hu3d4681b7b2768d4fb41ad73af2f2668f_38445_600x700_fill_box_smart1_3.png&#34; width=&#34;600&#34; height=&#34;700&#34;&gt;
+	
+	&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      Creción de componentes con artisan
+&lt;/span&gt;
+
+&lt;/p&gt;
+	&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;variables-en-componentes&#34;&gt;Variables en Componentes&lt;/h2&gt;
+&lt;p&gt;Los componentes de Blade  &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      ofrecen acceso a varias variables y objetos especiales
+&lt;/span&gt;
+ que facilitan la construcción de interfaces dinámicas y reutilizables. Los más usados&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$slot&lt;/li&gt;
+&lt;li&gt;$attributes&lt;/li&gt;
+&lt;li&gt;$errors&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;h3 id=&#34;slot&#34;&gt;$slot&lt;/h3&gt;
+&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      Contiene el contenido que se pasa al componente desde donde se llama.
+&lt;/span&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Fichero layout&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;x-layout.main&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;h1&lt;/span&gt;&amp;gt; Este es un contendio para el componente, lo recibirá como $slot&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;h1&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;x-layout.main&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Fichero del componente &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+main.blade.php
+&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &amp;lt;header class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;hidden lg:flex h-15v bg-header flex flex-row justify-center items-center&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;img class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;w-1/5 max-h-full w-auto  p-5 &amp;#34;&lt;/span&gt; src=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;{{asset(&amp;#34;&lt;/span&gt;images/logos/logo.png&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;)}}&amp;#34;&lt;/span&gt; alt=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;logo nett&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;div class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;w-3/5 flex justify-center items-center&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;h1 class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;text-3xl text-white h-auto max-w-full truncate &amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;          {{&lt;span style=&#34;color:#00688b&#34;&gt;$slot&lt;/span&gt;}}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;/h1&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;!-- ...  --&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/header&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;h3 id=&#34;atributes&#34;&gt;$atributes&lt;/h3&gt;
+&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      Permite acceder a atributos adicionales pasados al componente.
+&lt;/span&gt;
+&lt;p&gt;La variable &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkblue&#34;&gt;
+$attributes
+&lt;/span&gt;
+en los componentes de Blade de Laravel &lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+es una instancia de Illuminate\View\ComponentAttributeBag
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Proporciona varios métodos útiles para manipular los atributos que se pasan a un componente&lt;br&gt;
+&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+Uno de los métodos más útiles es merge()
+&lt;/span&gt;
+:&lt;/p&gt;
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;merge()&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;Fusiona los atributos predeterminados del componente con los atributos adicionales proporcionados en la vista.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      El método merge()
+&lt;/span&gt;
+ se usa comúnmente para combinar clases CSS y otros atributos. Esto es especialmente útil cuando deseas que tu componente tenga algunas clases CSS por defecto, pero también quieres permitir que se añadan clases adicionales desde fuera del componente.
+&lt;p&gt;Supongamos el siguiente ejemplo donde tenemos un  componente boton.blade.php: &lt;br&gt;
+Aquí, btn btn-default son las clases predeterminadas para todos los botones.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;&amp;lt;button {{ &lt;span style=&#34;color:#00688b&#34;&gt;$attributes&lt;/span&gt;-&amp;gt;&lt;span style=&#34;color:#658b00&#34;&gt;merge&lt;/span&gt;([&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;class&amp;#39;&lt;/span&gt; =&amp;gt; &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#39;btn btn-default&amp;#39;&lt;/span&gt;]) }}&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{ &lt;span style=&#34;color:#00688b&#34;&gt;$slot&lt;/span&gt; }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+Cuando usas el componente y pasas clases adicionales:
+&lt;p&gt;Laravel fusionará las clases, resultando en un botón que tiene class=&amp;ldquo;btn btn-default btn-large&amp;rdquo;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code&gt;&lt;span style=&#34;background-color:#d6d6c6&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex; background-color:#d6d6c6&#34;&gt;&lt;span&gt;&amp;lt;x-boton class=&lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;btn-large&amp;#34;&lt;/span&gt;&amp;gt;Click Aquí&amp;lt;/x-boton&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+Laravel fusionará las clases, resultando en un botón que tiene class=&#34;btn btn-default btn-large&#34;.    
+&lt;hr&gt;
+&lt;h4 id=&#34;otros-métodos-de-attributes&#34;&gt;Otros Métodos de $attributes&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;only()&lt;/code&gt;: Devuelve solo un subconjunto de los atributos.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;except()&lt;/code&gt;: Devuelve todos los atributos excepto los especificados.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;class()&lt;/code&gt;: Devuelve una instancia de Illuminate\View\ComponentAttributeBag solo con las clases.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;first()&lt;/code&gt;: Devuelve el primer valor de los atributos especificados.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;h3 id=&#34;pasando-atributos-a-un-componentes&#34;&gt;Pasando atributos a un componentes&lt;/h3&gt;
+&lt;p&gt;Para pasar atributos a un componente, usamos una sintaxis similar a la de las etiquetas HTML:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-blade&#34; data-lang=&#34;blade&#34;&gt;&amp;lt;x-miComponente atributo=&amp;#34;valor&amp;#34; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Posteriormente en el componete podemos utilzar dicho valor.&lt;/p&gt;
+&lt;p&gt;Si lo establecemos, Laravel proporciona una conversión automática entre la notación kebab-case en la invocación del componente y camelCase dentro del componente.&lt;/p&gt;
+&lt;h2 id=&#34;notación-kebab-case-y-camelcase&#34;&gt;Notación Kebab-Case y CamelCase&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Kebab-Case&lt;/strong&gt;: Usada al pasar atributos al componente. Ejemplo: &lt;code&gt;mi-atributo&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CamelCase&lt;/strong&gt;: Usada dentro del componente para referenciar estos atributos. Ejemplo: &lt;code&gt;miAtributo&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      Cuando invocas un componente y pasas un atributo, usas kebab-case:
+&lt;/span&gt;
+
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-blade&#34; data-lang=&#34;blade&#34;&gt;&amp;lt;x-miComponente mi-atributo=&amp;#34;valor&amp;#34; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;span class=&#34;font-weight-bold&#34; style=&#34;color:darkgreen&#34;&gt;
+      Dentro del archivo del componente, Laravel convierte automáticamente mi-atributo a miAtributo:
+&lt;/span&gt;
+
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-blade&#34; data-lang=&#34;blade&#34;&gt;&amp;lt;!-- miComponente.blade.php --&amp;gt;
+&amp;lt;div&amp;gt;
+    {{ $miAtributo }} &amp;lt;!-- Accede al valor de &amp;#39;mi-atributo&amp;#39; --&amp;gt;
+&amp;lt;/div&amp;gt;
+```
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>
